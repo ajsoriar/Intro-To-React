@@ -1,3 +1,5 @@
+// tuto url: https://facebook.github.io/react/tutorial/tutorial.html#getting-started
+
 // do npm start
 
 import React from 'react';
