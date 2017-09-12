@@ -1,6 +1,6 @@
 // tuto url: https://facebook.github.io/react/tutorial/tutorial.html#getting-started
 
-// do npm start
+// Instructions: do 'npm start' to test this.
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -13,8 +13,6 @@ import './index.css';
 
 // ReactDOM.render(<App />, document.getElementById('root'));
 // registerServiceWorker();
-
-
 
 class ShoppingList extends React.Component {
   render() {
@@ -37,6 +35,11 @@ ReactDOM.render(<ShoppingList name="Mark" />, document.getElementById('root'));
 
 */
 
+// -----------
+// Square
+// -----------
+
+/*
 class Square extends React.Component {
 
   constructor() {
@@ -48,21 +51,17 @@ class Square extends React.Component {
 
   render() {
 
-    /*
-    return (
-      <button className="square">
-        {this.props.value}
-      </button>
-    );
-    */
+//    return (
+//      <button className="square">
+//        {this.props.value}
+//      </button>
+//    );
 
-    /*
-    return (
-      <button className="square" onClick={() => this.setState({value: 'X'})}>
-        {this.state.value}
-      </button>
-    );
-    */
+//    return (
+//      <button className="square" onClick={() => this.setState({value: 'X'})}>
+//        {this.state.value}
+//      </button>
+//    );
 
     return (
       <button className="square" onClick={() => this.props.onClick()}>
@@ -72,6 +71,20 @@ class Square extends React.Component {
 
   }
 }
+*/
+
+function Square(props) {
+  return (
+    <button className="square" onClick={props.onClick}>
+      {props.value}
+    </button>
+  );
+}
+
+
+// -----------
+// Board
+// -----------
 
 class Board extends React.Component {
 
@@ -83,7 +96,7 @@ class Board extends React.Component {
   }
   
   handleClick(i) {
-    const squares = this.state.squares.slice();
+    const squares = this.state.squares.slice(); //We call .slice() to copy the squares array instead of mutating the existing array
     squares[i] = 'X';
     this.setState({squares: squares});
   }
@@ -122,6 +135,11 @@ class Board extends React.Component {
   }
 }
 
+
+// -----------
+// Game
+// -----------
+
 class Game extends React.Component {
   render() {
     return (
@@ -138,7 +156,10 @@ class Game extends React.Component {
   }
 }
 
-// ========================================
+
+// -----------
+// Init
+// -----------
 
 ReactDOM.render(
   <Game />,
