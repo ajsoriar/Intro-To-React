@@ -40,18 +40,28 @@ ReactDOM.render(<ShoppingList name="Mark" />, document.getElementById('root'));
 class Square extends React.Component {
 
   constructor() {
-    super();
+    super(); // In JavaScript classes, you need to explicitly call super(); when defining the constructor of a subclass.
     this.state = {
       value: null,
     };
   }
 
   render() {
+
+    /*
+    return (
+      <button className="square">
+        {this.props.value}
+      </button>
+    );
+    */
+
     return (
       <button className="square" onClick={() => this.setState({value: 'X'})}>
         {this.state.value}
       </button>
     );
+
   }
 }
 
