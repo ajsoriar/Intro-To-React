@@ -6,6 +6,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
+import Andres from './asoria.js';
+
+//import file from './file.js'; //In App.jsx
+
 /*
 
 // import App from './App';
@@ -314,7 +318,8 @@ class Game extends React.Component {
         'Move #' + move :
         'Game start';
       return (
-        <li key={move}>
+        <li key={move}> 
+          <Andres/>
           <a href="#" onClick={() => this.jumpTo(move)}>{desc}</a>
         </li>
       );
