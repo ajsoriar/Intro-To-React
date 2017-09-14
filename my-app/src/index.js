@@ -6,7 +6,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-import Andres from './asoria.js';
+import Andres1 from './asoria.v1.js';
+import Andres2 from './asoria.v2.js';
+import ReactStringAvatar from './react-string-avatar.js';
 
 //import file from './file.js'; //In App.jsx
 
@@ -274,13 +276,10 @@ class Game extends React.Component {
   handleClick(i) {
 
     this.doStuff();
-    
     //const history = this.state.history;
     const history = this.state.history.slice(0, this.state.stepNumber + 1);
     const current = history[history.length - 1];
-    
     const squares = current.squares.slice();
-
     this.logHistory( history );
 
     if (calculateWinner(squares) || squares[i]) {
@@ -319,11 +318,14 @@ class Game extends React.Component {
         'Game start';
       return (
         <li key={move}> 
-          <Andres/>
+          a)<Andres1 myvalue="777"/> <br/>
+          b)<Andres2/><br/>
+          c)<Andres2 myvalue="888"/><br/>
+          <ReactStringAvatar name="Andres Soria" />
           <a href="#" onClick={() => this.jumpTo(move)}>{desc}</a>
         </li>
       );
-    });
+    }); //size={48} radius={5} 
 
     let status;
     if (winner) {
@@ -349,7 +351,6 @@ class Game extends React.Component {
   }
 }
 
-
 // ----------------
 // calculateWinner
 // ----------------
@@ -373,7 +374,6 @@ function calculateWinner(squares) {
   }
   return null;
 }
-
 
 // -----------
 // Init

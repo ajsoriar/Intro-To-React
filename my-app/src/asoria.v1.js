@@ -2,9 +2,9 @@
 
 import React from 'react';
 
-export default class Andres extends React.Component {
+export default class Andres1 extends React.Component {
 
-    static displayName = 'Andres'
+    static displayName = 'Andres1'
 
     _renderImage() {
 
@@ -28,9 +28,11 @@ export default class Andres extends React.Component {
             <div className="hello"><img width={this.props.size}
                 height={this.props.size}
                 style={imageStyle}
-                alt="andres"
+                
             /></div>
-        );
+        ); 
+        
+        //alt="andres"
     }
 
     render() {
