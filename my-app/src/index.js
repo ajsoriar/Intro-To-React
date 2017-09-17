@@ -320,8 +320,8 @@ class Game extends React.Component {
         <li key={move}> 
           a)<Andres1 myvalue="777"/> <br/>
           b)<Andres2/><br/>
-          c)<Andres2 myvalue="888"/><br/>
-          <ReactStringAvatar name="Andres Soria" />
+          c)<Andres2 myvalue="888" wrapper="true"  /><br/>
+          <ReactStringAvatar name="Andresxxx Soriaxxx" bgcolor="#ff0000" str="Andres Soria" pictureResolution="45" picture-resolution="45" />
           <a href="#" onClick={() => this.jumpTo(move)}>{desc}</a>
         </li>
       );
