@@ -8,6 +8,7 @@ import './index.css';
 
 import Andres1 from './asoria.v1.js';
 import Andres2 from './asoria.v2.js';
+import Andres3 from './asoria.v3.js';
 import ReactStringAvatar from './react-string-avatar.js';
 
 //import file from './file.js'; //In App.jsx
@@ -318,9 +319,10 @@ class Game extends React.Component {
         'Game start';
       return (
         <li key={move}> 
-          a)<Andres1 myvalue="777"/> <br/>
-          b)<Andres2/><br/>
-          c)<Andres2 myvalue="888" wrapper="true"  /><br/>
+          v1)<Andres1 myvalue="777"/> <br/>
+          v3.a), (Render default values specified inside the component)<Andres3 /><br/>
+          v3.b), (Show values set in html tags)<Andres3 name="Andres" age="38" /><br/>
+          v2)<Andres2 myvalue="888" wrapper="true" /><br/>
           <ReactStringAvatar name="Andresxxx Soriaxxx" bgcolor="#ff0000" str="Andres Soria" pictureResolution="45" picture-resolution="45" />
           <a href="#" onClick={() => this.jumpTo(move)}>{desc}</a>
         </li>
